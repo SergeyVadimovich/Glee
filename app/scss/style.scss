@@ -3,6 +3,7 @@
 @import 'reset';
 @import 'global';
 
+// header
 .header{
   padding:40px 0;
   &__inner{
@@ -61,6 +62,127 @@
     border-radius:50%;
   }
 }
+// end header
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// footer
+.footer{
+  background-color: $bg;
+}
+
+.footer-top{
+  padding:70px 0 40px;
+  border-bottom:1px solid #ececec;
+  display:flex;
+  &__contact{
+    width:255px;
+    margin-right: 30px;
+  }
+  &__nav{
+      width:170px;
+      margin-right: 30px;
+  }
+  &__item-form{
+    max-width:480px;
+  }
+  &__logo{
+    display:block;
+    margin-bottom: 33px;
+  }
+  &__adress,
+  &__phone,
+  &__email{
+    margin-bottom: 14px;
+    display:block;
+  }
+  &__title{
+    margin-bottom: 40px;
+    @extend %roboto-500;
+    font-size:22px;
+    line-height:100%;
+    color:$title;
+  }
+  &__social-list{
+    display:flex;
+    align-items:center;
+    margin-top: 30px;
+  }
+  &__social-item + .footer-top__social-item{
+    padding-left:18px;
+  }
+  &__social-link{
+    transition:all .3s;
+    path{
+      fill:$default;
+    }
+    &:hover{
+      path{
+        fill:$accent;
+      }
+    }
+  }
+  &__link{
+    margin-bottom: 14px;
+    display:block;
+  }
+  &__text{
+    margin-bottom: 25px;
+  }
+  &__form-input{
+    max-width:320px;
+    width:100%;
+    background-color: #fff;
+    padding:15px 10px 12px 15px;
+    border:none;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+    &::placeholder{
+      color:$default;
+    }
+  }
+  &__form-btn{
+    @extend %roboto-400;
+    border:none;
+    background-color: $accent;
+    color:#fff;
+    text-transform: uppercase;
+    padding:8px 25px;
+    font-size:16px;
+    line-height:36px;
+    margin-left: 5px;
+    cursor:pointer;
+    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+  }
+}
+
+.footer-bottom{
+  height:75px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  @extend %quicksand-400;
+  font-size: 12px;
+  line-height: 34px;
+  &__accept-img{
+    display:inline-block;
+    margin-left: 25px;
+    vertical-align:middle;
+  }
+}
+// end footer
 
 @import 'media';
+
+
