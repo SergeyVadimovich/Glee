@@ -1,0 +1,11 @@
+  body{
+    @extend %rubik-400;
+    font-size:14px;
+    line-height: 32px;
+  }
+
+  .wrappeer{
+    max-width:1800px;
+    padding:0 15px;
+    margin:0 auto;
+  }
