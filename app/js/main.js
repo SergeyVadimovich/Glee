@@ -6,18 +6,17 @@ $(function(){
     autoplay:true,
     autoplaySpeed:2000,
     });
-
-  (function() {
-    const filtrations = $('[data-type="filtration"]');
-    
-    if (filtrations) {
-      filtrations.each(function(index, filtration) {
-        $(filtration).initFiltration({});
-      })
-    } 
-  })();
 });
 
+(function() {
+  const filtrations = $('[data-type="filtration"]');
+  
+  if (filtrations) {
+    filtrations.each(function(index, filtration) {
+      $(filtration).initFiltration({});
+    })
+  } 
+})()
 
 // design-filter
 // id="product-filter"
