@@ -45,3 +45,11 @@ $cards:#243f4d;
       transform: translateY(-50%);
     }
 }
+
+// fancy box fixed 'Sniped' "fbr+tab"
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

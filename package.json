@@ -14,6 +14,7 @@
     "mixitup": "^3.3.1"
   },
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.26.13",
     "del": "^6.0.0",
     "gulp-autoprefixer": "^7.0.1",
