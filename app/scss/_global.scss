@@ -13,8 +13,9 @@ body{
 }
 
 .wrapper{
-  max-width:1800px;
-  padding:0 15px;
+  max-width:1920px;
+  width:100%;
+  padding:0 75px;
   margin:0 auto;
   display:flex;
   flex-direction:column;
@@ -30,12 +31,22 @@ body{
   margin:0 auto;
 }
 
+
 .title{
   @extend %dmsans-700;
   font-size: 36px;
   text-align: center;
   margin-bottom: 35px;
   color: $title;
+}
+
+.top__title{
+  @extend %rubik-400;
+  text-align: center;
+  font-size: 36px;
+  line-height: 40px;
+  color:$top-title;
+  padding:25px 0 10px;
 }
  
 .filter{
@@ -58,4 +69,33 @@ body{
 .filter__btn{
   text-align: center;
   margin-bottom: 80px; 
+}
+
+.breadcrumbs{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  &__list{
+    display:flex;
+  }
+  &__item{
+    color:#9a9ea2;
+    padding-right:20px;
+    position:relative;
+    &::after{
+      content:'/';
+      position:absolute;
+      right:5px;
+      top:50%;
+      transform:translateY(-50%);
+    }
+    &:last-child{
+      &::after{
+        display:none;
+      }
+    }
+  }
+  &__link{
+    color:inherit;
+  }
 }
