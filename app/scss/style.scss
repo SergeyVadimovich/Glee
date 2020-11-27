@@ -755,6 +755,9 @@
     height:60px;
     padding:15px;
   }
+  &__text{
+    margin-bottom: 25px;
+  }
   &__btn{
     @extend %roboto-400;
     letter-spacing:0.2em;
