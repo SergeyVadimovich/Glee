@@ -868,28 +868,42 @@
   }
 }
 // end team
-
-
-
-
-
-
-
-.Rectangle_1 {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
-  position: absolute;
-  left: 774px;
-  top: 1895px;
-  width: 325px;
-  height: 111px;
-  z-index: 74;
+// end About page
+// terms&condition-page
+.terms{
+  padding-top:110px;
+  color:#243f4d;
+  &__title{
+    font-size: 24px;
+    line-height: 40px;
+    @extend %rubik-500;
+    margin-bottom: 20px;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 70px;
+    padding-right:30px;
+  }
+  &__list {
+    margin-bottom:65px;
+    padding-left:30px;
+  }
+  
+  &__list-item{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 35px;
+    list-style-type:decimal-leading-zero;
+    padding-left:10px;
+  }
 }
 
+// end terms&condition-page
 
 
 
 
-// end About page
+
 
 @import 'media';
