@@ -900,6 +900,137 @@
 }
 
 // end terms&condition-page
+// login-page
+.login{
+  padding:120px 0 120px;
+  @extend %rubik-500;
+  &__form{
+    max-width:480px;
+    width:100%;
+    margin:0 auto;
+    color:$default; 
+  }
+  &__label{
+    display:block;
+    margin-bottom: 30px;
+    color:$default; 
+  }
+  &__input{
+    display:block;
+    width:100%;
+    font-size: 16px;
+    line-height: 0;
+    padding:15px 10px;
+    border:2px solid $border;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.02);
+  }
+  &__btn{
+    @extend %rubik-500;
+    font-size: 18px;
+    color:#fff;
+    background-color: $btn;
+    border:none;
+    width:100%;
+    padding:15px 0;
+    margin-bottom: 35px;
+    transition:all .3s;
+    border:3px solid $btn;
+    &:hover{
+      color:$cards;
+      background-color: transparent;
+      border:3px solid $btn;
+    }
+  }
+  &__form-text{
+    display:flex;
+    justify-content:space-between;
+    color:$default;
+    padding-bottom:35px;
+    border-bottom:2px solid $border;
+  }
+  &__label-check{
+    padding-left:20px;
+    position:relative;
+  }
+  // check-box
+  &__check-box{
+    position:absolute;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
+  }
+  .check-box__style{
+    position:absolute;
+    margin-left:-20px;
+    width:14px;
+    height:14px;
+    border:1px solid $btn;
+    border-radius:3px;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  &__check-box:checked + .check-box__style{
+    background-image: url('../images/icons/check-on.svg');
+    background-position: center top;
+    background-color: $border;
+  }
+  &__check-box:focus + .check-box__style{
+    box-shadow: 0 0 0 2px $btn;
+  }
+  // end check-box
+  &__form-link{
+    color:$default;
+  }
+
+}
+// register
+.register{
+  text-align: center;
+  padding-top: 30px;
+  max-width:470px;
+  width:100%;
+  margin: 0 auto;
+  color:$default;
+  @extend %rubik-500;
+  line-height: 24px;
+  font-size: 16px;
+  &__text{
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  &__link{
+    display:block;
+    width:100%;
+    background-color: $btn;
+    padding:18px 0;
+    font-size: 18px;
+    color:#fff;
+    transition:all .3s;
+    border:3px solid $btn;
+    &:hover{
+      color:$cards;
+      background-color: transparent;
+      border:3px solid $btn;
+    }
+  }
+}
+// end register
+
+
+
+
+
+.partners-login{
+  background-color: #fef7f0;
+  padding:80px 0 80px;
+  &__inner{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+  }
+}
+// end login-page
 
 
 
