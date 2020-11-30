@@ -90,3 +90,48 @@
 .header--404-page{
   background-color:$bg;
 }
+
+.pagination{
+  display:flex;
+  justify-content:center;
+  padding:30px 0;
+  .pagination &__list{
+    display:flex;
+    padding:0 35px; 
+  }
+  &__item{
+    margin-left:30px;
+  }
+  &__arrows{
+    text-transform: uppercase;
+    position:relative;
+    &:before{
+      content:'';
+      position:absolute;
+      width:5px;
+      height:10px;
+    }
+  }
+  &__prev{
+    padding-left:15px;
+    &::before{
+      background-image: url('../images/icons/angle_left.svg');
+      left:0;
+      top:50%;
+      transform:translateY(-50%);
+    }
+  }
+  &__next{
+    padding-right:15px;
+    &::before{
+      background-image: url('../images/icons/angle_right.svg');
+      right:0;
+      top:50%;
+      transform:translateY(-50%);
+    }
+  }
+  &__link--active{
+    color:$accent;
+  }
+  
+}
