@@ -221,16 +221,18 @@
 // end info
 // filter product
 
-.product__items{
-  display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  grid-column-gap:30px;
-  grid-row-gap:40px;
-}
+
 .product{
   padding:75px 0 90px;
+  &__items{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-column-gap:30px;
+    grid-row-gap:40px;
+  }
   &__item{
     max-width:270px;
+    width:100%;
     min-height:380px;
     text-align: center;
     font-size: 16px;
@@ -1016,11 +1018,7 @@
   }
 }
 // end register
-
-
-
-
-
+// partners-login-page
 .partners-login{
   background-color: #fef7f0;
   padding:80px 0 80px;
@@ -1030,7 +1028,232 @@
     align-items:center;
   }
 }
+// end partners login-page
 // end login-page
+// product page 1
+.product-page{
+  padding:120px 0;
+  &__inner{
+    display:flex;
+  }
+  &__filters{
+    max-width:270px;
+    width:100%;
+    margin-right: 30px;
+  }
+  &__filtration-item{
+    width:100%;
+    margin-bottom: 35px;
+  }
+  &__filtration-title{
+    text-transform: uppercase;
+    @extend %dmsans-700;
+    font-size: 18px;
+    color:$cards;
+  }
+}
+// filter category
+.filter-category{
+  &__form{
+    margin-top: 30px;
+    color:$cards;
+  }
+  &__label{
+    display:block;
+    @extend %cursor;
+    border-radius: 12px;
+    transition:all .4s;
+    &:hover{
+      background-color: #edf1f4;
+      transform:translate3d(3px, 3px, 3px);
+    }
+  }
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked + .filter-category__checkbox{
+      background-color: #edf1f4;
+      border-radius:12px;
+    }
+  }
+  &__checkbox{
+    padding:15px;
+    overflow: hidden;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  &__checkbox-text{
+    font-size: 18px;
+  }
+  &__checkbox-item{
+    width:5px;
+    height:10px;
+    padding: 0 15px;
+    background-image: url('../images/icons/checkbox-arrow.svg');
+    background-repeat: no-repeat;
+  }  
+    
+}
+// end filter ctegory
+// filter-price
+.irs {
+  margin-top: 25px;
+}
+.irs--flat .irs-min, .irs--flat .irs-max {
+  display:none;
+}
+// line
+.irs--flat .irs-line {
+  top: 25px;
+  height: 3px;
+  background-color: #c2d2db;
+  border-radius: 4px;
+}
+.irs--flat .irs-bar {
+  top: 24px;
+  height: 5px;
+  background-color: #a3bbc8;
+}
+// kubik
+.irs--flat .irs-handle>i:first-child {
+  width: 15px;
+  height: 15px;
+  top:-3px;
+  margin-left:-1px;
+  background-color: #a3bbc8;
+  &:hover{
+    background-color: #516881;
+  }
+}
+.irs--flat .irs-handle {
+  top: 22px;
+  width: 0px;
+  height: 0px; 
+  background-color: transparent;
+}
+
+// price
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+  display:none;
+}
+.filter-price{
+  &__form{
+    padding-bottom:35px;
+  }
+  &__box{
+    width:100%;
+    display:flex;
+    align-items: center;
+    color:$cards;
+    margin-top:10px;
+  }
+  &__from{
+    margin-right: auto;
+  }
+}
+// end filter-price
+// filter brands
+.filter-brand{
+  &__form{
+    margin-top: 30px;
+  }
+  &__label{
+    display:block;
+    @extend %cursor;
+    border-radius: 12px;
+    transition:all .4s;
+    &:hover{
+      background-color: #edf1f4;
+      transform:translate3d(3px, 3px, 3px);
+    }
+  }
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked + .filter-brand__checkbox{
+      background-color: #edf1f4;
+      border-radius:12px;
+      .filter-brand__checkbox-numb--active{
+        color:$cards;
+      }
+    }
+  }
+  &__checkbox{
+    background-color: transparent;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:15px;
+    color:$cards;
+    font-size: 16px;
+  }
+  &__checkbox-numb{
+    color:$links;
+  }
+}
+// end filter brands
+// recent
+.filter-recent{
+  &__items{
+    margin-top: 30px;
+  }
+  &__item{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom: 20px;
+    transition: all .3s;
+    &:hover{
+      transform:scale(1.1);
+    }
+  }
+  &__img{
+    width:70px;
+    height:70px;
+    padding:5px;
+    border:2px solid #f2f2f2;
+    overflow: hidden;
+    img{
+      object-fit: cover;
+      margin: 0 auto;
+    }
+  }
+  &__box{
+    max-width:190px;
+    height:70px;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    padding:5px;
+  }
+  &__title{
+    font-size: 18px;
+    line-height: 20px;
+    color:#333;
+    margin-bottom: 10px;
+  }
+  &__price{
+    font-size: 15px;
+    color:#333;
+    line-height: 15px;
+    margin-top: 10px;
+  }
+}
+.jq-ry-container{
+  padding:0;
+}
+// end recent
+// end filtration
+// content
+.product-page{
+  &__content-inner{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 30px;
+    margin-bottom: 100px;
+  }
+}
+// end content
+// end product-page 1
 
 
 

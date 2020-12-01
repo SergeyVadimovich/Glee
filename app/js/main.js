@@ -1,4 +1,26 @@
 $(function(){
+  $('.filter-price__slider').ionRangeSlider({
+    type:"double",
+    prefix: "$",
+    step:"0.01",
+    onChange: function (data){
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onStart: function (data){
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+
+  });
+
+  $('.star').rateYo({
+    starWidth:"10px",
+    starHeigth:"10px",
+    readOnly:"true",
+    spacing:"5px",
+  });
+
   $('.slider__inner').slick({
     arrows:false,
     dots:true,

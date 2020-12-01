@@ -56,3 +56,14 @@ $border:#f6f6f6;
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
+
+%checkbox-hidden{
+  position:absolute;
+  width: 1px;
+  height: 1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+}
+%cursor{
+  cursor:pointer;
+}
