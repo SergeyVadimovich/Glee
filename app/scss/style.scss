@@ -792,6 +792,8 @@
   }
 }
 // end footer
+
+
 // page braedcrumbs
 .top{
   &__container{
@@ -805,6 +807,7 @@
   }
 }
 // end page breadcrumbs
+
 
 // login/Registration page
 .modal{
@@ -858,8 +861,9 @@
     color:$accent;
   }
 }
-
 // end login/Registration page
+
+
 // 404-page
 .page-404{
   padding: 110px 0 120px;
@@ -889,8 +893,8 @@
     padding:15px 35px;
   }
 }
-
 // end 404-page
+
 
 // Shop-page
 .shop{
@@ -1097,7 +1101,8 @@ display:none;
     background-color: $bg;
     color:$title;
     display:flex;
-    justify-content:space-between;padding:16px 20px;
+    justify-content:space-between;
+    padding:16px 20px;
   }
 }
 // end filter-category
@@ -1128,7 +1133,6 @@ display:none;
 }
 // end filter tags
 // end filter
-
 
 // shop-content
 // shop-content-filter
@@ -1194,9 +1198,302 @@ display:none;
     background-image: url('../images/icons/angle-down.svg');
   }
   // end shop-content-filter
-
   // end shop-content
-
   // end Shop-page
+  
+
+  // product info page
+  .product-page{
+    padding:120px 0 60px;
+    border-bottom:1px solid #f0f0f0;
+  }
+  .product-detail{
+    &__inner{
+      display:flex;
+    }
+    &__slide{
+      width:730px;
+      margin-right: 70px;
+    }
+    &__content{
+      width:370px;
+    }
+    &__title{
+      @extend %roboto-500;
+      font-size: 22px;
+      color:$title;
+      margin-bottom: 20px;
+    }
+    &__box{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom: 25px;
+    }
+    &__price{
+      display:flex;
+      font-size: 18px;
+    }
+    &__price-new{
+      color:$title;
+      margin-right: 15px;
+    }
+    &__price-old{
+      text-decoration:line-through;
+    }
+    &__item-star{
+      display:flex;
+      align-items:center;
+      span{
+        font-size: 18px;
+        color:$title;
+        padding-left: 8px;
+        vertical-align: middle;
+      }
+    }
+    &__text{
+      margin-bottom: 40px;
+      span{
+        display:block;
+        color:$title;
+        @extend %roboto-400;
+        font-size: 18px;
+      }
+    }
+    &__btn{
+      @extend %btn;
+      border:none;
+      text-transform: none;
+      margin-left: 15px;
+      cursor:pointer;
+    }
+  }
+  .product-filter{
+    &__color{
+      margin-bottom: 25px;
+    }
+    &__color-title,
+    &__size-title{
+      @extend %roboto-400;
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 10px;
+      color:$title;
+    }
+    &__color-label{
+      margin-right: 10px;
+    }
+    &__color-input{
+      @extend %radio-hidden;
+      &:checked + .product-filter__color-checkbox{
+        border-color:$accent;
+      }
+    }
+    &__color-checkbox{
+      width: 24px;
+      height: 24px;
+      border:1px solid #d6d6d8;
+      cursor:pointer;
+      position:relative;
+      display:inline-block;
+      background-color:#f0f0f0;
+      &:hover{
+        border-color:$accent;
+      }
+      span{
+        display:inline-block;
+        position:absolute;
+        width: 16px;
+        height: 16px;
+        top:3px;
+        left:3px;
+      }
+    }
+
+    &__size{
+      margin-bottom: 25px;
+    }
+    &__size-label{
+      margin-right: 10px;
+      display:inline-block;
+    }
+    &__size-input{
+      @extend %radio-hidden;
+      &:checked + .product-filter__size-checkbox{
+        border-color:$accent;
+        color:$accent;
+      }
+    }
+    &__size-checkbox{
+      padding: 4px 12px;
+      border:1px solid #f6f6f8;
+      cursor:pointer;
+      display:inline-block;
+    }
+
+    
+  }
+    // product-page number field
+  .jq-number__field {
+    width: 115px;
+    border: 1px solid #f0f0f0;
+    border-bottom-color: #f0f0f0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .jq-number__field input {
+    width: 100%;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    background: none;
+    @extend %quicksand-500;
+    color: $title;
+    text-align: center;
+  }
+  .jq-number {
+    position: relative;
+    vertical-align: middle;
+    padding:0;
+  }
+    // end product-page-number field
+    //  product-page-number btn
+    
+  .jq-number__spin.minus {
+    top:50%;
+    transform:translateY(-50%);
+    right:auto;
+    left:15px;
+  }
+
+  .jq-number__spin.plus {
+    top:50%;
+    transform:translateY(-50%);
+    left:auto;
+    right:15px;
+  }
+
+  .jq-number__spin {
+    position: absolute;
+    width: 15px;
+    height: 25px;
+    border: none;
+    border-radius: 0;
+    background:transparent;
+    box-shadow:none;
+    text-shadow:none;
+    cursor: pointer;
+  }
+      
+  .jq-number__spin::after {
+    content: '';
+    position: absolute;
+    border:none;
+    width:16px;
+    height:15px;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+  }
+
+  .jq-number__spin.minus::after {
+    border:none;
+    width:16px;
+    height:2px;
+    background-color: #000000;
+    top:50%;
+    transform: translateY(-50%);
+  }
+
+  .jq-number__spin.plus::after {
+    background-image: url('../images/icons/Plus.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+ // end product-page-number btn
+// slider product-page
+  .product-slide{
+    .slick-vertical .slick-slide{
+      height:140px;
+      margin-bottom: 30px;
+    }
+    &__thumb{
+      width: 140px;
+      margin-right: 30px;
+      float:left;
+    }
+    &__thumb-item{
+      width: 140px;
+      height: 140px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      img{
+        width: 140px;
+        height: 140px;
+        object-fit:cover;
+      }
+    }
+    &__big{
+      width:560px;
+      float:left;
+      img{
+        width:560px;
+        height:650px;
+        object-fit:cover;
+      }
+    }
+    
+  }
+  // end slider product-page
+  .product-info{
+    &__list{
+      margin-bottom: 30px;
+    }
+    &__item{
+      display:flex;
+      margin-bottom: 5px;
+      @extend %quicksand-500;
+    }
+    &__title{
+      min-width:100px;
+      font-size: 16px;
+      color:$title;
+    }
+    &__link{
+      path{
+        transition:all .3s;
+        fill:$default;
+      }
+      & + .product-info__link{
+        margin-left: 15px;
+      }
+      &:hover{
+        path{
+          fill:$accent;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // end product info page
 
 @import 'media';
