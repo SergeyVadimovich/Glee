@@ -1,4 +1,23 @@
 $(function(){
+  $('.product-slider__item-thumb').slick({
+    asNavFor:'.product-slider__item-big',
+    slidesToShow:3,
+    slidesToScroll:1,
+    draggable:false,
+    vertical:true,
+    focusOnSelect:true,
+  });
+
+
+  $('.product-slider__item-big').slick({
+    asNavFor:'.product-slider__item-thumb',
+    draggable:false,
+    arrows:false,
+    fade: true,
+  });
+
+  $('.product-detail__content-numb').styler();
+
   $('.filter-price__slider').ionRangeSlider({
     type:"double",
     prefix: "$",
