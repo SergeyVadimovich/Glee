@@ -1,4 +1,22 @@
 $(function(){
+
+    $('.product-tabs__top-item').on('click', function(e){
+      e.preventDefault();
+      $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+      $(this).addClass('product-tabs__top-item--active');
+      $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+      $($(this).attr('href')).addClass('product-tabs__content-item--active');
+    })
+    
+    
+  $('.slider__inner').slick({
+    arrows:false,
+    dots:true,
+    fade:true,
+    autoplay:true,
+    autoplaySpeed:2000,
+    });
+
   $('.product-slider__item-thumb').slick({
     asNavFor:'.product-slider__item-big',
     slidesToShow:3,
@@ -14,6 +32,14 @@ $(function(){
     draggable:false,
     arrows:false,
     fade: true,
+  });
+  
+  $('.related-product__items').slick({
+    slidesToShow:4,
+    slidesToScroll:1,
+    infinite:false,
+    prevArrow:'<button type="button" class="slick-prev"></button>',
+    nextArrow:'<button type="button" class="slick-next"></button>',
   });
 
   $('.product-detail__content-numb').styler();
@@ -38,15 +64,9 @@ $(function(){
     starHeigth:"10px",
     readOnly:"true",
     spacing:"5px",
+    starSvg:'<svg xmlns="http://www.w3.org/2000/svg" width="12pt" height="12pt" viewBox="0 0 12 12" version="1.1"><g><path style=" stroke:none;fill-rule:nonzero;fill:#ffcc00;fill-opacity:1;" d="M 6 0.292969 L 7.835938 4.078125 L 12 4.652344 L 8.96875 7.566406 L 9.707031 11.707031 L 6 9.722656 L 2.292969 11.707031 L 3.03125 7.566406 L 0 4.652344 L 4.164062 4.078125 Z M 6 0.292969 "/></g></svg>'
   });
 
-  $('.slider__inner').slick({
-    arrows:false,
-    dots:true,
-    fade:true,
-    autoplay:true,
-    autoplaySpeed:2000,
-    });
 });
 
 (function() {

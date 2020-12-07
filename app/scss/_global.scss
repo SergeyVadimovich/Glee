@@ -134,22 +134,39 @@ body{
     margin-left:10px;
   }
   &__link,
-  &__next{
+  &__next,
+  &__prev{
     font-size: 16px;
     line-height: 30px;
     color:$cards;
     padding: 19px 20px;
     border:1px solid $btn;
     transition:all .4s;
+  }
+  &__link{
+    &:hover{
+      background-color: #a3bbc8;
+      color:#fff;
+    }
+  }
+  &__next{
+    margin-left: 10px;
+    line-height: 19px;
     &:hover{
       background-color: #a3bbc8;
       color:#fff;
       transform:translate(3px, 3px);
     }
   }
-  &__next{
-    margin-left: 10px;
+  &__prev{
+    margin-right: 10px;
     line-height: 19px;
+    display:none;
+    &:hover{
+      background-color: #a3bbc8;
+      color:#fff;
+      transform:translate(-3px, 3px);
+    }
   }
   &__link--active{
       background-color: #a3bbc8;
