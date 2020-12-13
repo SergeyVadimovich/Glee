@@ -1,12 +1,26 @@
 $(function(){
 
+    $('.product-list__item-btn').on('click', function(event){
+      console.log(event.target);
+      const targetBtn = event.target;
+      const product = $(targetBtn).closest('.product-list__item');
+      $(product).addClass('product-list__item--added');
+    });
+    $('.filter-poppup__btn').on('click', function(event){
+      console.log(event.target);
+      const filterBtn = event.target;
+      const filter = $(filterBtn).closest('.filter-poppup');
+      $(filter).toggleClass('filter-poppup__disabled');
+      // $(filterBtn).toggleClass('filter-poppup__btn--disable')
+    });
+
     $('.product-tabs__top-item').on('click', function(e){
       e.preventDefault();
       $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
       $(this).addClass('product-tabs__top-item--active');
       $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
       $($(this).attr('href')).addClass('product-tabs__content-item--active');
-    })
+    });
     
     
   $('.slider__inner').slick({

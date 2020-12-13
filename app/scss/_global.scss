@@ -107,6 +107,37 @@ body{
 }
 
 .filter-poppup{
+  &.filter-poppup__disabled{
+    .filter-poppup__btn{
+      height: 18px;
+      width: 18px;
+      position:relative;
+      background-color: transparent;
+      &::before,
+      &::after{
+        content:'';
+        position:absolute;
+        background-color: $cards;
+      }
+      &::before{
+        height: 2px;
+        width: 18px;
+        top:50%;
+        transform: translateY(-50%);
+        left:0;
+      }
+      &::after{
+        width:2px;
+        height:18px;
+        top:0;
+        left:50%;
+        transform:translateX(-50%);
+      }
+    }
+    .filter-poppup__form{
+      display:none;
+    }
+  }
   &__label{
     display:flex;
     align-items:center;
