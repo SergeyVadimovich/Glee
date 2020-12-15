@@ -6,12 +6,12 @@ $(function(){
       const product = $(targetBtn).closest('.product-list__item');
       $(product).addClass('product-list__item--added');
     });
+    
     $('.filter-poppup__btn').on('click', function(event){
       console.log(event.target);
       const filterBtn = event.target;
       const filter = $(filterBtn).closest('.filter-poppup');
       $(filter).toggleClass('filter-poppup__disabled');
-      // $(filterBtn).toggleClass('filter-poppup__btn--disable')
     });
 
     $('.product-tabs__top-item').on('click', function(e){
@@ -78,7 +78,7 @@ $(function(){
     starHeigth:"10px",
     readOnly:"true",
     spacing:"5px",
-    starSvg:'<svg xmlns="http://www.w3.org/2000/svg" width="12pt" height="12pt" viewBox="0 0 12 12" version="1.1"><g><path style=" stroke:none;fill-rule:nonzero;fill:#ffcc00;fill-opacity:1;" d="M 6 0.292969 L 7.835938 4.078125 L 12 4.652344 L 8.96875 7.566406 L 9.707031 11.707031 L 6 9.722656 L 2.292969 11.707031 L 3.03125 7.566406 L 0 4.652344 L 4.164062 4.078125 Z M 6 0.292969 "/></g></svg>'
+    starSvg:'<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 12 12" version="1.1"><g><path style=" stroke:none;fill-rule:nonzero;fill:#ccc;fill-opacity:1;" d="M 6 0.292969 L 7.835938 4.078125 L 12 4.652344 L 8.96875 7.566406 L 9.707031 11.707031 L 6 9.722656 L 2.292969 11.707031 L 3.03125 7.566406 L 0 4.652344 L 4.164062 4.078125 Z M 6 0.292969 "/></g></svg>'
   });
 
 });
