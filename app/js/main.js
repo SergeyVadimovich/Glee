@@ -1,17 +1,16 @@
 $(function(){
 
     $('.product-list__item-btn').on('click', function(event){
-      console.log(event.target);
       const targetBtn = event.target;
       const product = $(targetBtn).closest('.product-list__item');
       $(product).addClass('product-list__item--added');
     });
     
     $('.filter-poppup__btn').on('click', function(event){
-      console.log(event.target);
       const filterBtn = event.target;
-      const filter = $(filterBtn).closest('.filter-poppup');
-      $(filter).toggleClass('filter-poppup__disabled');
+      const filterLabel = $(filterBtn).closest('.filter-poppup__label');
+      const targetSlide = $(filterLabel).siblings('.filter-poppup__form');
+      $(targetSlide).slideToggle();
     });
 
     $('.product-tabs__top-item').on('click', function(e){
