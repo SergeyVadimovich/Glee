@@ -1,12 +1,14 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
-const scss         = require('gulp-sass');
-const concat       = require('gulp-concat');
-const autoprefixer = require('gulp-autoprefixer');
-const uglify       = require('gulp-uglify');
-const browserSync  = require('browser-sync').create();
-const imagemin     = require('gulp-imagemin');
-const del          = require('del');
+const scss           = require('gulp-sass');
+const concat         = require('gulp-concat');
+const autoprefixer   = require('gulp-autoprefixer');
+const uglify         = require('gulp-uglify');
+const browserSync    = require('browser-sync').create();
+const imagemin       = require('gulp-imagemin');
+const del            = require('del');
+const nunjacksRender = require('gulp-nunjucks-render');
+const rename         = require('gulp-rename');
 
 function browsersync(){
   browserSync.init({
@@ -14,6 +16,13 @@ function browsersync(){
       baseDir:'app/'
     }
   })
+}
+
+function nunjacks(){
+  return src('app/*.njk')
+  .pipe(nunjacksRender())
+  .pipe(dest('app'))
+  .pipe(browserSync.stream())
 }
 
 function images(){
@@ -33,9 +42,12 @@ function images(){
 }
 
 function styles() {
-  return src('app/scss/style.scss')
+  return src('app/scss/*.scss')
   .pipe(scss({outputStyle:'compressed'}))
-  .pipe(concat('style.min.css'))
+  // .pipe(concat())
+  .pipe(rename({
+    suffix : '.min'
+  }))
   .pipe(autoprefixer({
     overrideBrowserslist:['last 10 versions'],
     grid: true,
@@ -76,6 +88,7 @@ function cleanDist(){
 
 function watching(){
   watch(['app/scss/**/*.scss'], styles);
+  watch(['app/*.njk'], nunjacks);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
@@ -83,9 +96,11 @@ function watching(){
 exports.styles      = styles;
 exports.scripts     = scripts;
 exports.browsersync = browsersync;
+exports.nunjacks    = nunjacks
 exports.watching    = watching;
 exports.images      = images;
 exports.cleanDist   = cleanDist;
+console.log(exports, 123);
 
 exports.build       = series(cleanDist, images, build);
-exports.default     = parallel(styles, scripts, browsersync, watching);
+exports.default     = parallel(nunjacks, styles, scripts, browsersync, watching);

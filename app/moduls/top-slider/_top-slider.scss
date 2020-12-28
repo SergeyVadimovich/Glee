@@ -1,0 +1,74 @@
+// top slider
+.top-slider{
+  background-image: url('../images/decor/top-slider-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $bg;
+  padding: 65px 0 45px;
+  &__container{
+    max-width:1560px;
+  }
+  &__content-box{
+    display:flex;
+    justify-content:space-between;
+  }
+  &__content{
+    padding-left:175px;
+    padding-top:125px;
+  }
+  &__title{
+    max-width:670px;
+    @extend %roboto-700;
+    font-size: 58px;
+    line-height: 68px;
+    color:$title;
+    margin-bottom: 35px;
+  }
+  &__text{
+    max-width:470px;
+    margin-bottom: 55px;
+  }
+  &__link{
+    @extend %btn;
+    padding:12px 35px;
+  }
+  .slick-dots{
+    display:flex;
+    justify-content: center;
+    margin-top: -70px;  
+    li{
+      margin:0 5px;
+      line-height: 0;
+      button{
+        padding:0;
+        font-size: 0;
+        background-color: transparent;
+        height: 26px;
+        width: 26px;
+        border-radius:50%;
+        border: 1px solid transparent;
+        position:relative;
+        &::before{
+          content:'';
+          position:absolute;
+          height: 6px;
+          width: 6px;
+          background-color:$default;
+          border-radius: 50%;
+          top:50%;
+          left:50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      &.slick-active{
+        button{
+          border-color:$accent;
+          &::before{
+            background-color: $accent;
+          }
+        }
+      }
+    }
+  }
+}
+// end top- slider

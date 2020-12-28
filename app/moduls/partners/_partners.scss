@@ -1,0 +1,12 @@
+// partners
+.partners{
+  padding: 75px 0 60px;
+  &__list{
+    height:170px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+}
+
+// end partners

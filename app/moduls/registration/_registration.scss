@@ -1,0 +1,53 @@
+// login/Registration page
+.modal{
+  max-width:570px;
+  margin:0 auto 115px;
+  padding-top:100px;
+  &__links{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &__link{
+    @extend %roboto-400;
+    font-size: 22px;
+    color:#909090;
+    text-transform: uppercase;
+    margin: 0 30px;
+  }
+  &__link--active{
+    color:$accent;
+  }
+  &__label{
+    display:block;
+    margin-bottom: 30px;
+  }
+  &__input{
+    display:block;
+    width:100%;
+    border:none;
+    background-color: $bg;
+    margin-top: 4px;
+    height:60px;
+    padding:15px;
+  }
+  &__text{
+    margin-bottom: 25px;
+  }
+  &__btn{
+    @extend %roboto-400;
+    letter-spacing:0.2em;
+    display:block;
+    background-color:$title;
+    color:#fff;
+    border:none;
+    text-transform: uppercase;
+    padding:15px 0;
+    margin-bottom: 20px;
+    width:100%;
+    cursor:pointer;
+  }
+  &__form-link{
+    color:$accent;
+  }
+}
+// end login/Registration page
