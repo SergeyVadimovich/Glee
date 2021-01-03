@@ -3,7 +3,7 @@
   background-image: url(../images/promo-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: left center;
   padding:150px 0 75px;
   text-align: center;
   &__inner {
@@ -57,3 +57,28 @@
 }
 
 // end promo
+// adaptiv
+@media(max-width:620px){
+  .promo{
+    padding:60px 0;
+    &__clock{
+      flex-wrap:wrap;
+      justify-content:space-around;
+      margin-top: 30px;
+    }
+    &__clock-item{
+      margin: 20px 30px;
+    }
+  }
+}
+@media(max-width:450px){
+  .promo{
+    &__link{
+      margin-top: 30px;
+    }
+    &__clock-item{
+      margin: 20px 8px;
+    }
+  }
+}
+// end adaptiv

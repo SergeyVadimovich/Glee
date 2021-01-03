@@ -14,12 +14,15 @@ function browsersync(){
   browserSync.init({
     server:{
       baseDir:'app/'
-    }
+    },
+    notify: false
   })
 }
 
 function nunjacks(){
-  return src('app/*.njk')
+  return src('app/*.njk',
+  'app/moduls/*.njk'
+  )
   .pipe(nunjacksRender())
   .pipe(dest('app'))
   .pipe(browserSync.stream())

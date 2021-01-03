@@ -35,6 +35,9 @@
     line-height:100%;
     color:$title;
   }
+  &__title--slide{
+    pointer-events:none;
+  }
   &__social-list{
     display:flex;
     align-items:center;
@@ -64,6 +67,7 @@
   &__form-input{
     max-width:320px;
     width:100%;
+    margin-right: 5px;
     background-color: #fff;
     padding:15px 10px 12px 15px;
     border:none;
@@ -77,19 +81,19 @@
     border:none;
     font-size:16px;
     line-height:36px;
-    margin-left: 5px;
     cursor:pointer;
   }
 }
 
 .footer-bottom{
-  height:75px;
+  min-height:75px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   @extend %quicksand-400;
   font-size: 12px;
   line-height: 34px;
+  flex-wrap:wrap;
   &__accept-img{
     display:inline-block;
     margin-left: 25px;
@@ -97,3 +101,83 @@
   }
 }
 // end footer
+// adaptiv
+@media(max-width:1050px){
+  .footer-top{
+    flex-wrap:wrap;
+    &__item-form{
+      max-width:100%;
+      margin-top: 30px;
+    }
+  }
+}
+@media(max-width:860px){
+  .footer-top{
+    &__contact{
+      width:100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+@media(max-width:620px){
+  .footer-top{
+    display:block;
+    &__nav{
+      display:block;
+      margin-right: auto;
+    }
+    &__title{
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+    &__title--slide{
+      pointer-events:auto;
+      position:relative;
+      &::after{
+        content:'';
+        position:absolute;
+        width: 10px;
+        height: 5px;
+        right:25px;
+        top:50%;
+        transition:all .3s ease-in-out;
+        transform:translateY(-50%);
+        background-image: url('../../images/icons/angle-down.svg');
+        background-repeat: no-repeat;
+      }
+      &-active{
+        &::after{
+          transition:all .3s ease-in-out;
+          transform:rotate(180deg);
+        }
+      }
+    }
+    &__list{
+      display:none;
+    }
+    &__item-form{
+      margin-top: 0;
+    }
+    &__contact{
+      margin-bottom: 0;
+    }
+    &__form-input{
+      display:block;
+      margin-right:0;
+      margin-bottom: 20px;
+      max-width:100%;
+    }
+  }
+  .footer-bottom{
+    justify-content:center;
+    &__copy{
+      text-align: center;
+      width:100%;
+    }
+    &__accept-img{
+      margin-left: 15px;
+    }
+  }
+}
+//end adaptiv
