@@ -137,19 +137,19 @@
       &::after{
         content:'';
         position:absolute;
+        display:block;
         width: 10px;
         height: 5px;
         right:25px;
         top:50%;
-        transition:all .3s ease-in-out;
-        transform:translateY(-50%);
+        transition:all 1s ease;
         background-image: url('../../images/icons/angle-down.svg');
         background-repeat: no-repeat;
       }
       &-active{
         &::after{
-          transition:all .3s ease-in-out;
-          transform:rotate(180deg);
+          transition:all 1s ease;
+          transform:rotate(540deg);
         }
       }
     }

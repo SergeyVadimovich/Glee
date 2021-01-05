@@ -4,5 +4,8 @@
 @import 'reset';
 @import 'global';
 @import '../moduls/header/header';
-@import '../moduls/top/_top';
+@import '../moduls/top/top';
+@import 'filter';
+@import '../moduls/product/product';
+@import '../moduls/shop-page/shop-page-1';
 @import '../moduls/footer/footer';

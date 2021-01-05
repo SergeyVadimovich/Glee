@@ -51,3 +51,12 @@
   }
 }
 // end login/Registration page
+// adaptiv
+@media(max-width:375px){
+  .modal{
+    &__link{
+      margin:0 20px;
+    }
+  }
+}
+// end adaptiv
