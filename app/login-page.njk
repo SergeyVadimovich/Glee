@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login-page.min.css">
+  <title>Glee</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="out-container">
+      {% include 'app/modules/header/_header.html'%}
+    </div>
+    <main class="main">
+      <section class="top">
+          <div class="container">
+            <h2 class="top__title">
+              Log in
+            </h2>
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="http://localhost:3000/index.html">
+                    Home
+                  </a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <span class="breadcrumbs__link" href="#">
+                    Log in
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </section>
+      {% include 'app/modules/login-page/_login-page.html'%}
+    </main>
+    {% include 'app/modules/footer/_footer.html'%}
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+</html>

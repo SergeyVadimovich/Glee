@@ -1,0 +1,127 @@
+// articles
+.articles{
+  padding:55px 0 0px;
+  &__wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items: baseline;
+    margin-bottom: 30px;
+  }
+  &__title{
+    margin-bottom: 0;
+  }
+  &__link{
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 24px;
+    color:$title;
+    & span{
+      margin-left: 15px;
+      & path{
+        fill:$title;
+      }
+    }
+  }
+  &__inner{
+    background-color: #fef7f0;
+    margin-top:280px;
+  }
+  &__items{
+    display:flex;
+    justify-content: space-between;
+    transform:translateY(-250px);
+  }
+  &__item{
+    max-width:370px;
+    width:100%;
+    background-color: #fff;
+    border-radius: 18px;
+    transition:all .3s;
+    &:hover{
+      transform:scale(1.1);
+    }
+  }
+  &__item-link{
+    display:flex;
+    flex-direction: column;
+  }
+  &__item-img{
+    max-width:370px;
+    width:100%;
+    height:250px;
+    object-fit: cover;
+  }
+  &__item-mark{
+    text-transform: uppercase;
+    max-width:100px;
+    @extend %poppins-700;
+    line-height: 20px;
+    color:#fff;
+    background-color: #a3bbc8;
+    border-radius:50px;
+    padding:4px 30px;
+    margin-left: 30px;
+    transform:translateY(-15px);
+  }
+  &__item-title{
+    @extend %dmsans-500;
+    font-size: 18px;
+    line-height: 22px;
+    color:#262626;
+    padding-bottom:22px;
+    margin:0 auto;
+    max-width:315px;
+    width:100%;
+    border-bottom:1px solid #e0e0e0;
+  }
+}
+
+.item-info{
+  min-height:60px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  text-transform: uppercase;
+  color:$title;
+  line-height: 20px;
+  padding-left:30px; 
+  &__date,
+  &__user{
+    padding-left:30px;
+    position:relative;
+    &::before{
+      content:'';
+      position:absolute;
+      width: 25px;
+      height: 20px;
+      top:50%;
+      transform: translateY(-50%);
+      left:0;
+    }
+  }
+
+  &__date{
+    margin-right: 30px;
+    &::before{
+      background-image: url('../images/icons/date-blog.svg');
+      background-repeat: no-repeat;
+    }
+  }
+  &__user{
+    &::before{
+      background-image: url('../images/icons/user.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}
+// partners
+.partners{
+  display:flex;
+  justify-content: space-around;
+  align-items:center;
+  min-height:100px;
+  margin-top:-160px;
+  padding-bottom:90px;
+}
+// end partners
+// end articles

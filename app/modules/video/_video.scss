@@ -1,0 +1,19 @@
+// video
+.video{
+  margin:60px 0 55px;
+  min-height:500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  &__link-btn{
+    border-radius: 50%;
+    &:hover{
+        animation: pulse 1s infinite;
+      }
+    }
+}
+
+// end video

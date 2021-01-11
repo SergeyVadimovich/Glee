@@ -1,0 +1,90 @@
+// footer
+.footer-top{
+  padding-top:70px;
+  padding-bottom: 60px;
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid #dae4e9;
+  &__logo{
+    display:inline-block;
+    margin-bottom: 25px;
+  }
+  &__item{
+    max-width:150px;
+  }
+  &__item-contact{
+    max-width:200px;
+  }
+  &__item-form{
+    width:300px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    padding-top:22px;
+  }
+  &__list-item{
+    @extend %rubik-500;
+    margin-bottom: 20px;
+    line-height: 18px;
+  }
+  &__list-link{
+    color:$links;
+    font-size:14px;
+  }
+  &__text{
+    color:$links;
+    font-size:14px;
+    line-height:18px;
+    margin-bottom: 30px;
+  }
+  &__form{
+    @extend %dmsans-400;
+  }
+  &__form-input{
+    font-size: 12px;
+    line-height:18px;
+    padding:8px 10px 8px 15px;
+    margin-right: 5px;
+  }
+  &__form-btn{
+    background-color: #a3bbc8;
+    border:none;
+    color:#fff;
+    padding:10px 15px;
+    font-size: 14px;
+    line-height: 21px;
+    cursor:pointer;
+  }
+}
+
+.footer-bottom{
+  display:flex;
+  justify-content: space-between;
+  @extend %rubik-500;
+  color:$links;
+  padding:35px 30px;
+  &__list{
+    display:flex;
+  }
+  &__list-item{
+    position:relative;
+  }
+  &__list-item + .footer-bottom__list-item{
+    margin-left: 20px;
+    padding-left:20px;
+  }
+  &__list-item + .footer-bottom__list-item::before{
+    content:'|';
+    position:absolute;
+    left:0;
+  }
+  &__list-link a{
+    color:$links;
+    @extend %rubik-500;
+  }
+}
+// end footer

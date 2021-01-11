@@ -1,0 +1,77 @@
+// slider
+.slider{
+  padding-top:220px;
+  background-repeat: no-repeat;
+  background-position: 84% 50%;
+  background-color: #fcd7b6;
+  &__item{
+    padding-left:40px;
+  }
+  &__content-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom: 160px;
+  }
+  &__content{
+    max-width:470px;
+  }
+  &__content-title{
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height:86px;
+    color:#243f4d;
+    margin-bottom: 35px;
+  }
+  &__content-text{
+    font-size: 18px;
+    line-height: 30px;
+    color:$default;
+    max-width:370px;
+  }
+  &__content-link{
+    display:inline-block;
+    color:#fff;
+    margin-top: 40px;
+    background-color: #a3bbc8;
+    @extend %lb;
+    transition:all .3s;
+    & path{
+      fill:#fff;
+    }
+    &:hover{
+      animation: pulse 1s infinite;
+      border-radius:12px;
+      background-color: #fff;
+      color: #a3bbc8;
+      path{
+        fill:#a3bbc8;
+      }
+    }
+    
+  }
+  .slick-dots{
+    display:flex;
+    justify-content: center;
+    margin: 0;
+    padding:0;
+    padding-bottom: 45px;
+  }
+  .slick-active button{
+    opacity:1;
+  }
+  li{
+    padding:0;
+    button{
+      line-height: 0;
+      border-radius: 50%;
+      font-size: 11px;
+      padding:12px 10px;
+      border:none;
+      margin-right: 10px;
+      opacity:0.5;
+    }
+  }  
+}
+
+// end slider

@@ -3,69 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/login-page.min.css">
   <title>Glee</title>
 </head>
 <body>
   <div class="wrapper">
     <div class="out-container">
-    <header class="header">
-      <a class="header__logo" href="#">
-        <img class="header__logo-img" src="images/logo.png" alt="logo">
-      </a>
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="http://localhost:3000/index.html">
-              Home + 
-            </a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="http://localhost:3000/about-page.html">
-              About
-            </a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              Services
-            </a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              Pages + 
-            </a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              News  
-            </a>
-          </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="user-nav">
-        <a class="user-nav__link user-nav__link--search" href="#">
-          <img class="user-nav__img" src="images/icons/user-menu-search.png" alt="user-menu">
+      <header class="header">
+        <a class="header__logo" href="index.html">
+          <img class="header__logo-img" src="images/logo.png" alt="logo">
         </a>
-          <a class="user-nav__link user-nav__link--heart" href="#">
-            <img class="user-nav__img" src="images/icons/user-menu-heart.png" alt="user-menu">
-            <span class="user-nav__numb">0</span>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="index.html">
+                Home + 
+              </a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="about-page.html">
+                About
+              </a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">
+                Services
+              </a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">
+                Pages + 
+              </a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="blog-page.html">
+                News  
+              </a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="contact-page.html">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="user-nav">
+          <a class="user-nav__link user-nav__link--search" href="#">
+            <img class="user-nav__img" src="images/icons/user-menu-search.png" alt="user-menu">
           </a>
-          <a class="user-nav__link user-nav__link--cart" href="#">
-            <img class="user-nav__img" src="images/icons/user-menu-cart.png" alt="user-menu">
-            <span class="user-nav__numb">0</span>
+            <a class="user-nav__link user-nav__link--heart" href="#">
+              <img class="user-nav__img" src="images/icons/user-menu-heart.png" alt="user-menu">
+              <span class="user-nav__numb">0</span>
+            </a>
+            <a class="user-nav__link user-nav__link--cart" href="#">
+              <img class="user-nav__img" src="images/icons/user-menu-cart.png" alt="user-menu">
+              <span class="user-nav__numb">0</span>
+            </a>
+          <a class="user-nav__link user-nav__link--dots" href="#">
+            <img class="user-nav__img" src="images/icons/dots-menu.svg" alt="user-menu">
           </a>
-        <a class="user-nav__link user-nav__link--dots" href="#">
-          <img class="user-nav__img" src="images/icons/dots-menu.svg" alt="user-menu">
-        </a>
-      </div>
-    </header>
-  </div>
-    <div class="main">
+        </div>
+      </header>
+    </div>
+    <main class="main">
       <section class="top">
           <div class="container">
             <h2 class="top__title">
@@ -88,57 +88,57 @@
           </div>
       </section>
       <section class="login">
-        <div class="container">
-          <form class="login__form" action="#">
-            <label class="login__label">
-              Username or email address *
-              <input class="login__input" type="text" required>
-            </label>
-            <label class="login__label">
-              Password *
-              <input class="login__input" type="password" required>
-            </label>
-            <button class="login__btn" type="submit">
-              Login
-            </button>
-            <div class="login__form-text">
-              <label class="login__label-check">
-                <input class="login__check-box" type="checkbox">
-                <span class="check-box__style"></span>
-              Remember me
-              </label>
-              <a class="login__form-link" href="#">
-                Lost your password?
-              </a>
-            </div>
-          </form>
-          <div class="register">
-            <div class="register__text">
-              <p>Not registered? No problem</p>
-            </div>
-            <a class="register__link" href="#">
-              Create an account
-            </a>
-          </div>
-        </div>
-      </section>
-      <div class="partners-login">
-        <div class="container">
-          <div class="partners-login__inner">
-            <img class="partners-login__img" src="images/partners/1.png" alt="parteners-logo">
-            <img class="partners-login__img" src="images/partners/2.png" alt="parteners-logo">
-            <img class="partners-login__img" src="images/partners/3.png" alt="parteners-logo">
-            <img class="partners-login__img" src="images/partners/4.png" alt="parteners-logo">
-            <img class="partners-login__img" src="images/partners/5.png" alt="parteners-logo">
-          </div>
-        </div>
+  <div class="container">
+    <form class="login__form" action="#">
+      <label class="login__label">
+        Username or email address *
+        <input class="login__input" type="text" required>
+      </label>
+      <label class="login__label">
+        Password *
+        <input class="login__input" type="password" required>
+      </label>
+      <button class="login__btn" type="submit">
+        Login
+      </button>
+      <div class="login__form-text">
+        <label class="login__label-check">
+          <input class="login__check-box" type="checkbox">
+          <span class="check-box__style"></span>
+        Remember me
+        </label>
+        <a class="login__form-link" href="#">
+          Lost your password?
+        </a>
       </div>
+    </form>
+    <div class="register">
+      <div class="register__text">
+        <p>Not registered? No problem</p>
+      </div>
+      <a class="register__link" href="#">
+        Create an account
+      </a>
+    </div>
+  </div>
+</section>
+<div class="partners-login">
+  <div class="container">
+    <div class="partners-login__inner">
+      <img class="partners-login__img" src="images/partners/1.png" alt="parteners-logo">
+      <img class="partners-login__img" src="images/partners/2.png" alt="parteners-logo">
+      <img class="partners-login__img" src="images/partners/3.png" alt="parteners-logo">
+      <img class="partners-login__img" src="images/partners/4.png" alt="parteners-logo">
+      <img class="partners-login__img" src="images/partners/5.png" alt="parteners-logo">
+    </div>
+  </div>
+</div>
     </main>
     <footer class="footer">
       <div class="container">
         <div class="footer-top">
           <div class="foter-top__item footer-top__item-contact">
-            <a class="footer-top__logo" href="#">
+            <a class="footer-top__logo" href="index.html">
               <img class="header__logo-img" src="images/logo.png" alt="logo">
             </a>
             <ul class="footer-top__list">
@@ -160,13 +160,13 @@
               </li>
             </ul>
           </div>
-          <div class="foter-top__item">
+          <div class="footer-top__item">
             <h6 class="footer-top__title">
               Services 
             </h6>
             <ul class="footer-top__list">
               <li class="footer-top__list-item">
-                <a class="footer-top__list-link" href="#">
+                <a class="footer-top__list-link" href="about-page.html">
                   About us
                 </a>
               </li>
@@ -176,29 +176,29 @@
                 </a>
               </li>
               <li class="footer-top__list-item">
-                <a class="footer-top__list-link" href="#">
+                <a class="footer-top__list-link" href="blog-page.html">
                   Our Blog
                 </a>
               </li>
               <li class="footer-top__list-item">
-                <a class="footer-top__list-link" href="#">
+                <a class="footer-top__list-link" href="contact-page.html">
                   Contact Us
                 </a>
               </li>
               <li class="footer-top__list-item">
-                <a class="footer-top__list-link" href="#">
+                <a class="footer-top__list-link" href="terms&condition.html">
                   Terms & Condition
                 </a>
               </li>
             </ul>
           </div>
-          <div class="foter-top__item">
+          <div class="footer-top__item">
             <h6 class="footer-top__title">
               Account
             </h6>
             <ul class="footer-top__list">
               <li class="footer-top__list-item">
-                <a class="footer-top__list-link" href="#">
+                <a class="footer-top__list-link" href="login-page.html">
                   Your Account
                 </a>
               </li>
@@ -208,18 +208,18 @@
                 </a>
               </li>
               <li class="footer-top__list-item">
-                <a class="footer-top__list-link" href="#">
+                <a class="footer-top__list-link" href="login-page.html">
                   Login
                 </a>
               </li>
               <li class="footer-top__list-item">
-                <a class="footer-top__list-link" href="#">
+                <a class="footer-top__list-link" href="login-page.html">
                   Register
                 </a>
               </li>
             </ul>
           </div>
-          <div class="foter-top__item footer-top__item-form">
+          <div class="footer-top__item-form">
             <h6 class="footer-top__title">
               newsletter
             </h6>

@@ -1,0 +1,60 @@
+// promo
+.promo{
+  padding: 85px 0 50px;
+  &__inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+  }
+  &__item{
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+    background-color: #feefe2;
+    max-width:870px;
+    min-height: 400px;
+    width:100%;
+    &:first-child{
+      margin-right: 20px;
+    }
+  }
+  &__item-content{
+    max-width: 400px;
+    color:$cards;
+  }
+  &__item-img{
+    margin-top: -150px;
+    margin-right: 20px;
+  }
+  &__item-title{
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 25px;
+    max-width: 250px;
+  }
+  &__item-text{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+  &__item-link{
+    @extend %lb;
+    display:inline-block;
+    border:1px solid $cards;
+    border-radius: 8px;
+    color:$cards;
+    transition:all .3s; 
+    & path{
+      fill:inherit;
+    }
+    &:hover{
+      background-color: $cards;
+      color:#fff;
+      path{
+        fill:#fff;
+      }
+    }
+  }
+}
+// end promo
