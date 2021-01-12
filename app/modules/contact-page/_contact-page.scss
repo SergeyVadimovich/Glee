@@ -1,0 +1,167 @@
+// contact-page
+.contact{
+  padding:120px 0;
+  &__top{
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  &__top-suptitle{
+    @extend %poppins-700;
+    color:$btn;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &__top-title{
+    font-size: 35px;
+    line-height: 57px;
+    color:$default;
+  }
+  &__items{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+  }
+  &__item{
+    display:inline-block;
+    background-color: #fbfbfb;
+    max-width:370px;
+    width:100%;
+    min-height:380px;
+    text-align: center;
+    padding:70px 25px 80px;
+    border:3px solid #fbfbfb;
+    transition:all .3s;
+    &:hover{
+      border:3px solid $btn;
+      .contact__item-icon{
+        background-color: $btn;
+        path{
+          fill:#fff;
+        }
+      }
+    }
+  }
+  &__item-icon{
+    display:block;
+    margin:0 auto;
+    width:80px;
+    height:80px;
+    background-color:#fff;
+    border-radius:12px;
+    margin-bottom: 60px;
+    padding:15px;
+    transition:all .3s;
+    path{
+      fill:$btn;
+      transition:all .3s;
+    }
+  }
+  &__item-title{
+    @extend %dmsans-700;
+    font-size: 20px;
+    line-height: 26px;
+    color:#222;
+    margin-bottom: 20px;
+  }
+  &__item-text{
+    font-size: 16px;
+    line-height: 30px;
+    color:#565872;
+  }
+  &__item-link{
+    display:block;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__box{
+    display:flex;
+    justify-content:space-between;
+  }
+  &__form{
+    max-width:620px;
+    width:100%;
+  }
+  &__label{
+    @extend %cursor;
+    position:relative;
+  }
+  &__input-name,
+  &__input-mail{
+    max-width:300px;
+    width:100%;
+    padding:10px 40px 10px 20px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 36px;
+    border:1px solid #e5e5e5;
+    outline-color: $btn;
+  } 
+  &__input-mail{
+    margin-left: 15px;
+  }
+  &__textarea{
+    max-width:830px;
+    width:100%;
+    min-height:175px;
+    padding:20px 30px 20px 20px;
+    resize:none;
+    outline-color: $btn;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 15px;
+    background-image: url('../images/icons/comment.svg');
+    background-repeat: no-repeat;
+    background-position: 97% 17%;
+  }
+  &__input-name,
+  &__input-mail,
+  &__textarea{
+    border:none;
+    background-color: #fafafa;
+    &::placeholder{
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 30px;
+      color:#565872;
+    }
+  }
+  &__btn{
+    font-size: 14px;
+    line-height: 22px;
+    padding:15px 35px;
+    margin:0;
+    border:none;
+    background-color: $btn;
+    color:#fff;
+    text-transform: uppercase;
+    @extend %cursor;
+    border-radius:8px;
+    outline-color: $btn;
+    &:hover{
+      animation: pulse 1s infinite;
+    }
+  }
+}
+.input-icon__user,
+.input-icon__mail{
+  width: 18px;
+  height: 14px;  
+  &::after{
+    content:'';
+    position:absolute;
+    width: 18px;
+    height: 14px;
+    right:12px;
+    top:50%;
+    transform:translateY(-50%);
+    background-repeat: no-repeat;;
+  }
+}
+.input-icon__user::after{
+  background-image: url('../images/icons/user-name.svg');
+}
+.input-icon__mail::after{
+  background-image: url('../images/icons/user-mail.svg');
+}
+//end  contact-page
